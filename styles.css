@@ -720,7 +720,6 @@ nav {
     align-items: center;
   }
 
-/* Contact Section Styling */
 .contact {
   background: #b8e2f4;
   padding: 60px 20px;
@@ -733,10 +732,9 @@ nav {
   margin-bottom: 30px;
 }
 
-.contact-container {
+.contact__container {
   max-width: 500px;
   margin: 0 auto;
-  width: 100%;
 }
 
 form {
@@ -748,16 +746,10 @@ form {
 form input,
 form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 12px 15px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  box-sizing: border-box;
-}
-
-form textarea {
-  resize: vertical;
-  min-height: 100px;
 }
 
 form button {
@@ -773,22 +765,25 @@ form button {
 }
 
 form button:hover {
-  background-color: #e68a00;
+  background-color: #e68900;
 }
 
-/* Mobile Friendly Fix */
-@media screen and (max-width: 600px) {
-  .contact-container {
-    padding: 0 10px;
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .contact__container {
+    width: 100%;
   }
 
   form input,
-  form textarea,
-  form button {
+  form textarea {
     font-size: 1rem;
-    width: 100%;
   }
 }
+
   
 footer {
   background: #3b3535;
