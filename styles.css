@@ -722,7 +722,7 @@ nav {
 
   .contact {
   background: #b8e2f4;
-  color: white;
+  color: #000; /* Changed to black for better readability */
   padding: 60px 20px;
   text-align: center;
 }
@@ -733,29 +733,56 @@ nav {
 }
 
 form {
+  width: 100%;
   max-width: 500px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  gap: 15px; /* Modern spacing */
 }
 
-form input, form textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 5px;
+form input,
+form textarea {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
 }
 
 form button {
-  padding: 10px;
-  border: none;
+  padding: 12px 15px;
   background: #ff9900;
   color: white;
-  font-weight: bold;
-  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+form button:hover {
+  background: #e68900;
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 600px) {
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 0.95rem;
+  }
+}
+  
 footer {
   background: #3b3535;
   color: #aaa;
