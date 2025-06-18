@@ -151,18 +151,36 @@
     </section>
 
       
-<section class="contact-section" id="contact">
-  <div class="contact-box">
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-container">
     <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/saiprestige01@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="tel" name="phone" placeholder="Phone Number" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <p>Any question or remarks? Just write us a message!</p>
+    <form class="contact-form">
+      <div class="form-group">
+        <label><i class="fa fa-user"></i> Full Name</label>
+        <input type="text" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <label><i class="fa fa-phone"></i> Phone Number</label>
+        <input type="tel" placeholder="Phone Number" required />
+      </div>
+      <div class="form-group">
+        <label><i class="fa fa-envelope"></i> Email</label>
+        <input type="email" placeholder="Your Email" required />
+      </div>
+      <div class="form-group">
+        <label><i class="fa fa-comment"></i> Your Message</label>
+        <textarea placeholder="Write your message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
     </form>
   </div>
 </section>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
 
 
 
