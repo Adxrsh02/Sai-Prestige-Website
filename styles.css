@@ -720,68 +720,70 @@ nav {
     align-items: center;
   }
 
-  .contact {
+ .contact {
   background: #b8e2f4;
-  color: #000; /* Changed to black for better readability */
   padding: 60px 20px;
   text-align: center;
+  color: #000;
 }
 
 .contact h2 {
-  margin-bottom: 30px;
   font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.contact__container {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 form {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Modern spacing */
+  gap: 15px;
 }
 
 form input,
 form textarea {
+  width: 100%;
   padding: 12px 15px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  resize: vertical;
 }
 
 form button {
-  padding: 12px 15px;
-  background: #ff9900;
+  padding: 12px;
+  background-color: #ff9900;
   color: white;
-  font-weight: 600;
   font-size: 1rem;
+  font-weight: bold;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 form button:hover {
-  background: #e68900;
+  background-color: #e68900;
 }
 
-/* Mobile-specific tweaks */
+/* Mobile adjustments */
 @media (max-width: 600px) {
   .contact {
     padding: 40px 15px;
   }
 
-  .contact h2 {
-    font-size: 1.5rem;
+  .contact__container {
+    width: 100%;
   }
 
   form input,
-  form textarea,
-  form button {
-    font-size: 0.95rem;
+  form textarea {
+    font-size: 1rem;
   }
 }
+
   
 footer {
   background: #3b3535;
