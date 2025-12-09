@@ -32,7 +32,7 @@
 }
 
 .btn:hover {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(255, 247, 247, 0.2);
 }
 
 img {
@@ -720,16 +720,11 @@ nav {
     align-items: center;
   }
 
+/* WhatsApp contact form – mobile first */
 .contact {
   background: #b8e2f4;
-  padding: 60px 20px;
-  text-align: center;
+  padding: 60px 16px;
   color: #000;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
 }
 
 .contact__container {
@@ -737,56 +732,123 @@ nav {
   margin: 0 auto;
 }
 
-form {
+#whatsappContactForm {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
-form input,
-form textarea {
+.contact__field {
+  text-align: left;
+}
+
+.contact__field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.contact__field input,
+.contact__field textarea {
   width: 100%;
-  padding: 12px 15px;
+  padding: 12px 14px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
+  background: #fff;
 }
 
-form button {
-  padding: 12px;
-  background-color: #ff9900;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.contact__field textarea {
+  resize: vertical;
+  min-height: 110px;
 }
 
-form button:hover {
-  background-color: #e68900;
+.contact__btn {
+  width: 100%;
+  justify-content: center;
 }
 
-/* Mobile adjustments */
+/* Mobile tweak */
 @media (max-width: 600px) {
   .contact {
     padding: 40px 15px;
   }
+}
+/* ==== FINAL OVERRIDE FOR CONTACT FORM (MOBILE PERFECT) ==== */
+.contact {
+  background: #b8e2f4;
+  padding: 60px 16px;
+  color: #000;
+}
 
-  .contact__container {
-    width: 100%;
-  }
+.contact__container {
+  max-width: 480px;
+  margin: 0 auto;
+}
 
-  form input,
-  form textarea {
-    font-size: 1rem;
+/* Reset global styles that break the form */
+#whatsappContactForm,
+#whatsappContactForm * {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+#whatsappContactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact__field {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.contact__field label {
+  display: block !important;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.contact__field input,
+.contact__field textarea {
+  display: block !important;
+  width: 100% !important;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.contact__field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.contact__btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  .contact {
+    padding: 40px 15px;
   }
 }
 
+
+
+
   
 footer {
-  background: #3b3535;
+  background: #ffffff;
   color: #aaa;
   text-align: center;
   padding: 20px;
@@ -827,3 +889,228 @@ footer {
     padding: 2rem 1.5rem;
   }
 }
+/* FINAL CONTACT FORM LAYOUT (MOBILE PERFECT) */
+.contact {
+  background: #b8e2f4;
+  padding: 40px 16px 60px;
+  color: #000;
+}
+
+.contact__container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Reset & layout only for WhatsApp contact form */
+#whatsappContactForm,
+#whatsappContactForm * {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+#whatsappContactForm {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px;
+}
+
+.contact__field {
+  width: 100%;
+  text-align: left;
+}
+
+.contact__field label {
+  display: block !important;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.contact__field input,
+.contact__field textarea {
+  display: block !important;
+  width: 100% !important;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.contact__field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.contact__btn {
+  width: 100%;
+  justify-content: center;
+}
+/* Smaller hero heading on mobiles */
+@media (max-width: 600px) {
+  .header__content h1 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}
+/* Smaller section headings on mobile */
+@media (max-width: 600px) {
+  .section__header {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+}
+.subscribe__content {
+  padding: 3rem 1.5rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, #daa520, #ff8906);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+  text-align: left;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating highlight circle */
+.subscribe__content::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  top: -60px;
+  right: -40px;
+  filter: blur(1px);
+}
+
+/* Badge and texts */
+.subscribe__badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.subscribe__title {
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.subscribe__text {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+/* Form */
+.subscribe__content form {
+  width: 100%;
+  max-width: 640px;
+  margin: 0;
+  padding: 0.25rem;
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(8px);
+}
+
+.subscribe__content input {
+  flex: 1;
+  padding: 0 0.9rem;
+  border: none;
+  outline: none;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+.subscribe__content input::placeholder {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.subscribe__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-inline: 1rem;
+  background: var(--white);
+  color: var(--primary-color);
+  font-weight: 700;
+  border-radius: 0.6rem;
+}
+
+.subscribe__btn i {
+  font-size: 1.1rem;
+}
+
+/* Small note text */
+.subscribe__note {
+  margin-top: 0.9rem;
+  font-size: 0.78rem;
+  opacity: 0.9;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .subscribe__content {
+    padding: 2.4rem 1.25rem;
+    text-align: left;
+  }
+
+  .subscribe__title {
+    font-size: 1.35rem;
+    line-height: 1.9rem;
+  }
+
+  .subscribe__content form {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .subscribe__btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* Mobile navbar: light background so logo is visible */
+@media (max-width: 600px) {
+  .nav__header {
+    background-color: var(--white);
+  }
+
+  /* Mobile dropdown menu should still be orange */
+  .nav__links {
+    background-color: var(--primary-color);
+  }
+
+  /* Make brand text dark if you still show it */
+  .nav__logo a,
+  .nav__logo span {
+    color: var(--text-dark);
+  }
+}
+
+/* Mobile hamburger: light gray box + black icon */
+@media (max-width: 600px) {
+  .nav__menu__btn {
+    color: #000000;                 /* icon lines black */
+    background-color: #f2f2f2;      /* light gray box */
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
