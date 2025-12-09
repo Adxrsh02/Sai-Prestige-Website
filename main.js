@@ -92,3 +92,32 @@ document.getElementById("whatsappForm").addEventListener("submit", function (e) 
 
   window.open(whatsappURL, "_blank");
 });
+// WhatsApp contact form (Sai Prestige)
+const whatsappContactForm = document.getElementById("whatsappContactForm");
+
+if (whatsappContactForm) {
+  whatsappContactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("cname").value.trim();
+    const email = document.getElementById("cemail").value.trim();
+    const phone = document.getElementById("cphone").value.trim();
+    const message = document.getElementById("cmessage").value.trim();
+
+    if (!name || !email || !phone || !message) {
+      alert("Please fill all fields.");
+      return;
+    }
+
+    const whatsappNumber = "919326433965"; // Sai Prestige number with country code, no +
+    const text =
+      `New enquiry from Sai Prestige website:%0A%0A` +
+      `Name: ${encodeURIComponent(name)}%0A` +
+      `Email: ${encodeURIComponent(email)}%0A` +
+      `Phone: ${encodeURIComponent(phone)}%0A` +
+      `Message: ${encodeURIComponent(message)}`;
+
+    const url = `https://wa.me/${919326433965}?text=${text}`;
+    window.open(url, "_blank");
+  });
+}
