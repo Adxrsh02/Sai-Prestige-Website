@@ -18,7 +18,7 @@
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="#">Sai<span>Prestige</span></a>
+          <img src="assets/logo.png" alt="Sai Prestige logo" />
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
@@ -154,16 +154,41 @@
 <!-- Contact Form -->
 <section class="contact" id="contact">
   <div class="section__container contact__container">
-    <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/saiprestige01@gmail.com" method="POST">
-      <div><input type="text" name="name" placeholder="Your Name" required /></div>
-      <div><input type="email" name="email" placeholder="Your Email" required /></div>
-      <div><input type="tel" name="phone" placeholder="Phone Number" required /></div>
-      <div><textarea name="message" placeholder="Your Message" rows="4" required></textarea></div>
-      <div><button type="submit">Send Message</button></div>
+    <h2 class="section__header">Contact Us</h2>
+
+    <form id="whatsappContactForm">
+      <div class="contact__field">
+        <label for="cname">Your Name</label>
+        <input id="cname" name="name" type="text"
+               placeholder="Your Name" required />
+      </div>
+
+      <div class="contact__field">
+        <label for="cemail">Your Email</label>
+        <input id="cemail" name="email" type="email"
+               placeholder="you@example.com" required />
+      </div>
+
+      <div class="contact__field">
+        <label for="cphone">Phone Number</label>
+        <input id="cphone" name="phone" type="tel"
+               placeholder="+91 98765 43210" required />
+      </div>
+
+      <div class="contact__field">
+        <label for="cmessage">Your Message</label>
+        <textarea id="cmessage" name="message" rows="4"
+                  placeholder="How can we help?" required></textarea>
+      </div>
+
+      <button type="submit" class="btn contact__btn">
+        Send on WhatsApp
+      </button>
     </form>
   </div>
 </section>
+
+
 
 
 
@@ -186,11 +211,11 @@
           <div class="portfolio__image">
             <div class="portfolio__image__content">
               <div>
-                <h4>2</h4>
+                <h4>6+</h4>
                 <p>Years<br />Experience</p>
               </div>
               <div>
-                <h4>5+</h4>
+                <h4></h4>
                 <p>Happy Clients<br />Across Navi Mumbai</p>
               </div>
             </div>
@@ -343,20 +368,38 @@
       </div>
     </section>
 
-   <section class="section__container subscribe__container" id="contact">
-  <div class="subscribe__content">
-    <h2 class="section__header">
-      Subscribe Newsletter Get Latest Updates and Dates
-    </h2>
-    <form id="whatsappForm">
-      <input type="email" id="emailInput" placeholder="Enter your email here..." required />
-      <button type="submit" class="btn">
-        Subscribe
-        <span><i class="ri-arrow-right-long-line"></i></span>
-      </button>
-    </form>
+<section class="subscribe">
+  <div class="section__container">
+    <div class="subscribe__content">
+      <p class="subscribe__badge">New projects • Price drops • Investment picks</p>
+      <h2 class="subscribe__title">
+        Get Navi Mumbai property alerts<br />
+        before they hit the portals
+      </h2>
+      <p class="subscribe__text">
+        One WhatsApp per week. No spam, only curated Sai Prestige deals.
+      </p>
+
+      <form id="whatsappForm">
+        <input
+          id="emailInput"
+          type="email"
+          placeholder="Enter your email for alerts"
+          required
+        />
+        <button type="submit" class="btn subscribe__btn">
+          <span>Get Alerts on WhatsApp</span>
+          <i class="ri-arrow-right-line"></i>
+        </button>
+      </form>
+
+      <p class="subscribe__note">
+        By subscribing, you agree to receive property updates from Sai Prestige.
+      </p>
+    </div>
   </div>
 </section>
+
 
 
     <footer>
@@ -376,7 +419,7 @@
               <a href=" https://www.instagram.com/sai.prestige?igsh=MWp0eDg3a2MxdXpqNg%3D%3D&utm_source=qr"><i class="ri-facebook-fill"></i></a>
             </li>
             <li>
-              <a href="https://wa.me/919326433965"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://wa.me/919326433965"><i class="ri-whatsapp-fill"></i></a>
             </li>
             <li>
               <a href=" https://www.instagram.com/sai.prestige?igsh=MWp0eDg3a2MxdXpqNg%3D%3D&utm_source=qr"><i class="ri-instagram-line"></i></a>
